@@ -1,0 +1,6 @@
+c:\users\chung\documents\visual studio 2013\Projects\AIOPracticeQuestions\AIOPracticeQuestions\bin\Debug\AIOPracticeQuestions.exe.config
+C:\Users\chung\Documents\Visual Studio 2013\Projects\AIOPracticeQuestions\AIOPracticeQuestions\bin\Debug\AIOPracticeQuestions.exe
+C:\Users\chung\Documents\Visual Studio 2013\Projects\AIOPracticeQuestions\AIOPracticeQuestions\bin\Debug\AIOPracticeQuestions.pdb
+C:\Users\chung\Documents\Visual Studio 2013\Projects\AIOPracticeQuestions\AIOPracticeQuestions\obj\Debug\AIOPracticeQuestions.csprojResolveAssemblyReference.cache
+C:\Users\chung\Documents\Visual Studio 2013\Projects\AIOPracticeQuestions\AIOPracticeQuestions\obj\Debug\AIOPracticeQuestions.exe
+C:\Users\chung\Documents\Visual Studio 2013\Projects\AIOPracticeQuestions\AIOPracticeQuestions\obj\Debug\AIOPracticeQuestions.pdb
