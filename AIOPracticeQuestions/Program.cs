@@ -540,4 +540,31 @@ namespace AIOPracticeQuestions
 	}
 
 	#endregion
+
+	#region Practice 2013 Q1
+	public class SolutionToQuestionOneIn2013{
+
+		private int[] totalListArray;
+		private int[] totalNumOfFences;
+
+		public SolutionToQuestionOneIn2013(String input){
+			StreamReader reader = new StreamReader (input);
+			this.totalNumOfFences = int.Parse (reader.ReadLine());
+			int counter = 0; String line;
+			while ((line = reader.ReadLine ()) != null) {
+				this.totalNumOfFences.SetValue(int.Parse(reader.ReadLine(),counter));
+				counter++;
+			}
+			reader.Close ();
+		}
+
+		private int solve(){
+			int currentMax = 0;
+
+
+		}
+
+	}
+
+	#endregion
 }
