@@ -1,0 +1,6 @@
+/Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe.config
+/Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe.mdb
+/Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe
+/Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/AIOPracticeQuestions.exe
+/Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/AIOPracticeQuestions.exe.mdb

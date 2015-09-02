@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="AIOPracticeQuestions/AIOPracticeQuestions.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AIOPracticeQuestions/Program.cs">
+    <Files>
+      <File FileName="AIOPracticeQuestions/Program.cs" Line="461" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
