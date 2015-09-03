@@ -21,8 +21,8 @@ namespace AIOPracticeQuestions
 			String input = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments) + "/test.txt";
 			String output = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments) + "/result.txt";
 				
-			SolutionToQuestionThreeIn2014 newSolution = new SolutionToQuestionThreeIn2014 (input);
-			newSolution.generateSolutionText (output);
+			Solution newSolution = new Solution (input);
+			newSolution.generateSolution (output);
         }   
     }
 
@@ -540,31 +540,156 @@ namespace AIOPracticeQuestions
 	}
 
 	#endregion
+	public class Solution {
 
-	#region Practice 2013 Q1
-	public class SolutionToQuestionOneIn2013{
+		/*
+     * MAX_C is the largest possible number of chairs, as defined in the
+     * problem statement.
+     */
+		public const int MAX_C = 100000;
 
-		private int[] totalListArray;
-		private int[] totalNumOfFences;
+		/*
+     * C is the total number of chairs. $(N)s is the total number of friends to
+     * whom you have to assign seats. $(K)s is the number of friends who are
+     * able to sit on either a wet or dry chair
+     */
+		private int C;
+		private int N;
+		private int K;
 
-		public SolutionToQuestionOneIn2013(String input){
-			StreamReader reader = new StreamReader (input);
-			this.totalNumOfFences = int.Parse (reader.ReadLine());
-			int counter = 0; String line;
-			while ((line = reader.ReadLine ()) != null) {
-				this.totalNumOfFences.SetValue(int.Parse(reader.ReadLine(),counter));
-				counter++;
-			}
-			reader.Close ();
+		/*
+     * chairs, is a string of the characters 'd' and 'w' representing dry and
+     * wet chairs.
+     */
+		private string chairs;
+
+		/*
+     * Read the next token from the input file.
+     * Tokens are separated by whitespace, i.e., spaces, tabs and newlines.
+     * If end-of-file is reached then an empty string is returned.
+     */
+		public Solution(String input){
+			StreamReader input_file = new StreamReader(input);
+			/* Read the values of C, N, K from the input file.  */
+			C = int.Parse(readToken(input_file));
+			N = int.Parse(readToken(input_file));
+			K = int.Parse(readToken(input_file));
+			chairs = readToken(input_file);
+
+			input_file.Close ();
 		}
 
-		private int solve(){
-			int currentMax = 0;
+		public void generateSolution(String input){
+			StreamWriter writer = new StreamWriter (input);
+			writer.WriteLine (this.solve ().ToString ());
+			writer.Close ();
+		}
 
+		private static string readToken(StreamReader sr) {
+			StringBuilder ans = new StringBuilder();
+			int next;
+
+			/* Skip any initial whitespace. */
+			next = sr.Read();
+			while (next >= 0 && char.IsWhiteSpace ((char)next))
+				next = sr.Read ();
+
+			/* Read the following token. */
+			while (next >= 0 && ! char.IsWhiteSpace((char)next)) {
+				ans.Append((char)next);
+				next = sr.Read();
+			}
+
+			return ans.ToString();
+		}
+
+
+		private int solve (){
+			//preliminary
+			if (K > N) {
+				return 0;
+			}
+			List<String> seatArray = new List<String> (C);
+			foreach (char c in chairs) {
+				seatArray.Add (c.ToString());
+			}
+
+
+			List<int> dIndexes = new List<int> ();
+			for (int i = 0; i < seatArray.Count; i++) {
+				if (seatArray[i] == 'd'.ToString ()) {
+					dIndexes.Add (i);
+				}
+			}
+
+			int minDistance = C;
+
+			foreach (int dIndex in dIndexes) {
+				int indexOfFirstD = dIndex;
+				int dCount = 0;
+				int reachedDIndex = 0;
+				for (int i = indexOfFirstD; i < seatArray.Count; i++) {
+					if (seatArray [i] == 'd'.ToString ()) {
+						dCount++;
+					}
+					if (dCount >= (N - K)) {
+						reachedDIndex = i;
+						break;
+					}
+				}
+
+				if (reachedDIndex == 0) {
+					return minDistance;
+				}
+
+				int wCount = 0;
+				for (int j = indexOfFirstD; j <= reachedDIndex; j++) {
+					if (seatArray [j] == 'w'.ToString ()) {
+						wCount++;
+						if (wCount >= K) {
+							//throw new Exception ("??");
+							int result = reachedDIndex - indexOfFirstD + 1;
+							if (result < minDistance) {
+								minDistance = result;
+								break;
+							}
+						} else {
+							for (int k = indexOfFirstD; k >= 0; k--) {
+								if (seatArray [k] == 'w'.ToString ()) {
+									wCount++;
+									if (wCount >= K) {
+										int result = reachedDIndex - k + 1;
+										if (result < minDistance) {
+											minDistance = result;
+											break;
+										}
+									} else {
+										for (int p = reachedDIndex; p < seatArray.Count; p++) {
+											if (seatArray [p] == 'w'.ToString ()) {
+												wCount++;
+												if (wCount >= K) {
+													int result = p - reachedDIndex + 1;
+													if (result < minDistance) {
+														minDistance = result;
+														break;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			return minDistance;
 
 		}
 
 	}
 
-	#endregion
+
 }

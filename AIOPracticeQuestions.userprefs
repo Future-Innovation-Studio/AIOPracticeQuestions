@@ -2,7 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AIOPracticeQuestions/Program.cs">
     <Files>
-      <File FileName="AIOPracticeQuestions/Program.cs" Line="556" Column="15" />
+      <File FileName="AIOPracticeQuestions/Program.cs" Line="624" Column="4" />
+      <File FileName="../../../Downloads/templates-cs-windows-senior/wetchairs.cs" Line="81" Column="33" />
+      <File FileName="../../../Downloads/templates-cs-windows-senior/binary.cs" Line="21" Column="41" />
+      <File FileName="../../../Downloads/templates-cs-windows-senior/ruckus.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

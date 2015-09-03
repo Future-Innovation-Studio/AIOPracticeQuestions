@@ -4,3 +4,9 @@
 /Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe
 /Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/AIOPracticeQuestions.exe
 /Users/ying/Documents/Development/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/AIOPracticeQuestions.exe.mdb
+/Users/Jackie/Projects/C# Projects/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/Users/Jackie/Projects/C# Projects/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/AIOPracticeQuestions.exe
+/Users/Jackie/Projects/C# Projects/AIOPracticeQuestions/AIOPracticeQuestions/obj/Debug/AIOPracticeQuestions.exe.mdb
+/Users/Jackie/Projects/C# Projects/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe.config
+/Users/Jackie/Projects/C# Projects/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe.mdb
+/Users/Jackie/Projects/C# Projects/AIOPracticeQuestions/AIOPracticeQuestions/bin/Debug/AIOPracticeQuestions.exe
